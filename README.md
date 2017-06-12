@@ -6,7 +6,7 @@ Log-Directory:
 
 Run Example: 
 
-`docker run -d --name tailon -v /path/to/log/dir:/log port22/tailon *`
+`docker run -d --name tailon -v /path/to/log/dir:/log -p 888:80 port22/tailon *`
 
 the `*` at the end is the argument passed to the tailon binary and will make **all files** in /log available.
   - It must not contain spaces.  
