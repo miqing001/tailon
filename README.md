@@ -1,6 +1,8 @@
 # tailon
 
-Log-Directory:  /log
+Log-Directory:  
+
+`/log`
 
 Run Example: 
 
