@@ -6,7 +6,9 @@ VOLUME /log
 EXPOSE 80
 
 RUN echo "#!/bin/sh">/tailon.sh
-RUN echo 'tailon -b 0.0.0.0:80 -t 9999999 -f /log' >>/tailon.sh
+
+#example: export TARGS="-u user:pass" ; docker run ...
+RUN echo 'tailon ${TARGS} -b 0.0.0.0:80 -t 9999999 -f /log' >>/tailon.sh
 
 RUN apk update && apk add grep gawk
 RUN rm -f /usr/bin/awk /bin/grep
