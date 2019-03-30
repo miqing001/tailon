@@ -6,4 +6,4 @@ RUN pip install tailon                \
 &&  ln -s /usr/bin/gawk /usr/bin/awk  \
 &&  ln -s /usr/bin/grep /bin/grep
 
-ENTRYPOINT ["tailon", "-b", "0.0.0.0:80", "-t", "9999" "-f", "/log"]
+CMD ["/usr/local/bin/tailon", "-b", "0.0.0.0:80", "-t", "9999" "-f", "/log"]
