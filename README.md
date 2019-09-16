@@ -4,9 +4,6 @@ Log-Directory:
 
 `/log`
 
-Run Example: 
+Run:
 
-`docker run -d --name tailon -v /path/to/log/dir:/log -p 888:80 port22/tailon`
-
-It will parse all files ending with `.log`
-  
+`docker run -d --restart=always --name tailon -v /path/to/log/dir:/log -p 888:80 port22/tailon`  
